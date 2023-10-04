@@ -6,7 +6,7 @@ mod crow_core;
 fn main() {
     println!("Welcome to Crow sandbox :)");
 
-    let vm_name = String::from(r"win10x64");
+    let _vm_name = String::from(r"win10x64");
     //vm_manager::start_vm_machine(&path);
 	//vm_manager::start_vm_machine(&vm_name);
     crow_core::init();
