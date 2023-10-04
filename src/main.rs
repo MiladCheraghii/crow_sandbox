@@ -6,7 +6,13 @@ mod crow_core;
 fn main() {
     println!("Welcome to Crow sandbox :)");
 
-    let path = String::from(r"C:\\Users\\Milad\\Documents\\Virtual Machines\\win10x64\\");
+    let vm_name = String::from(r"win10x64");
     //vm_manager::start_vm_machine(&path);
-	vm_manager::stop_vm_machine(&path);
+	//vm_manager::start_vm_machine(&vm_name);
+    crow_core::init();
+    crow_core::init_for_any_file("fderfe");
+    match crow_core::calculate_hash_file("Cargo.toml") {
+    Ok(hash) => println!("Hash: {}", hash),
+    Err(e) => println!("Error: {}", e),
+    }
 }
