@@ -7,16 +7,21 @@ use std::str;
 static ROOT_WORK_DIR: &str = "result_files/";
 
 pub fn init() {
+   println!(
+        "User's Name            whoami::realname():    {}",
+        whoami::realname(),
+    );
+
     match std::fs::create_dir(ROOT_WORK_DIR) {
         Ok(()) => println!("result_files root directory created."),
-        Err(_e) => println!("result_files root directory dodon't created."),
+        Err(_e) => println!("crow_core_alert:{}", _e),
     };
 }
 
 pub fn init_for_any_file(file_hash_name: &str) {
     match std::fs::create_dir_all(ROOT_WORK_DIR.to_string() + file_hash_name) {
         Ok(()) => println!("result_file_dir directory created."),
-        Err(_e) => println!("result_file_dir directory don't created."),
+        Err(_e) => println!("crow_core_alert:{}", _e),
     };
 }
 

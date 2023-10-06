@@ -1,5 +1,8 @@
 // This module is vm's handler that managment every think that is about Vms.
 
+static VM_PATH : &str = r"C:\Users\Milad\Documents\Virtual Machines\";
+
+
 pub fn start_vm_machine(machine_name: &str) {
     let mut vm_name = String::from(r"C:\Users\Milad\Documents\Virtual Machines\win10x64\");
     vm_name.push_str(machine_name);

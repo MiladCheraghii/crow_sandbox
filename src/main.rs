@@ -1,18 +1,16 @@
 mod crow_core;
 mod vm_manager;
+mod arguments_managment;
 
 fn main() {
-    println!("Welcome to Crow sandbox :)");
+    arguments_managment::run();
 
     let _vm_name = String::from(r"win10x64");
-    //vm_manager::start_vm_machine(&path);
-    //vm_manager::start_vm_machine(&vm_name);
+    
     crow_core::init();
 
-    match crow_core::calculate_hash_file("Cargo.toml") {
+    match crow_core::calculate_hash_file("src/crow_core.rs") {
         Ok(hash) => crow_core::init_for_any_file(hash.as_str()),
         Err(e) => println!("Error: {}", e),
     }
-
-    //crow_core::init_for_any_file(hash);
 }
