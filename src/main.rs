@@ -3,6 +3,7 @@ mod vm_manager;
 mod arguments_managment;
 
 fn main() {
+    arguments_managment::print_help();
     arguments_managment::run();
 
     let _vm_name = String::from(r"win10x64");
