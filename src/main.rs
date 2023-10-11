@@ -3,11 +3,12 @@ mod vm_manager;
 mod arguments_managment;
 
 fn main() {
-    arguments_managment::print_help();
 
+    let arg_config = arguments_managment::run();
+    
     crow_core::init();
     
-    let arg_config = arguments_managment::run();
+   
 
     //println!("{}", arg_config.file_name);
 
@@ -23,3 +24,4 @@ fn main() {
     let _vm_name = String::from(r"win10x64");
     
 }
+
