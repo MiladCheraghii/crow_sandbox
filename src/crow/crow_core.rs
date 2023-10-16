@@ -5,7 +5,6 @@ use std::io::Read;
 use std::str;
 use text_colorizer::*;
 
-
 //use std::fs::{self, DirBuilder};
 
 static ROOT_WORK_DIR: &str = "result_files\\";
@@ -18,25 +17,21 @@ pub fn init() {
 }
 
 pub fn init_for_any_file(config: String) {
-    
     let hash_file = calculate_hash_file(String::from(&config));
-   
+
     //println!("{}", hash_file.unwrap());
     //let s = append_dir(ROOT_WORK_DIR.as_ref(), &config);
     //println!("{}",s.to_string_lossy());
 
     //let mmmm = ROOT_WORK_DIR.to_string().push_str(&hash_file.unwrap());
-   
-    match std::fs::create_dir_all(&hash_file.unwrap()){
+
+    match std::fs::create_dir_all(&hash_file.unwrap()) {
         Ok(()) => println!("Success: result_file_dir directory created."),
         Err(e) => println!("crow_core_alert:{}", e),
     }
-  
-    
 
     //let path = ROOT_WORK_DIR.to_string();
     //DirBuilder::new().recursive(true).create(path);
-
 
     /*
     match std::fs::copy(&config, re){

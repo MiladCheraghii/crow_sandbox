@@ -1,7 +1,6 @@
 // This module is vm's handler that managment every think that is about Vms.
 
-static mut VM_PATH : &str = r"C:\Users\Milad\Documents\Virtual Machines\";
-
+static mut VM_PATH: &str = r"C:\Users\Milad\Documents\Virtual Machines\";
 
 pub fn start_vm(_machine_name: String) {
     let mut vm_name = String::from(r"C:\Users\Milad\Documents\Virtual Machines\win10x64\");
@@ -68,4 +67,3 @@ pub fn list_all_snapshots(_machine_name: String) {
 
 // we need that knows vms state for any operation.
 // all fn must have a error handling
-

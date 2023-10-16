@@ -1,4 +1,5 @@
 [package]
+default-members = ["src/crow"]
 name = "crow_sandbox"
 version = "0.1.0"
 edition = "2021"
@@ -11,3 +12,15 @@ sha2 = "0.10.8"
 whoami = "1.4.1"
 text-colorizer = "1"
 regex = "1"
+
+
+
+
+[[bin]]
+name = "crow"
+path = "src/crow/main.rs"
+
+
+[[bin]]
+name = "agent"
+path = "src/agent/agent.rs"
