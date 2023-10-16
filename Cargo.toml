@@ -14,8 +14,6 @@ text-colorizer = "1"
 regex = "1"
 
 
-
-
 [[bin]]
 name = "crow"
 path = "src/crow/main.rs"

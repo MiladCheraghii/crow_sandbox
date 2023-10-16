@@ -3,7 +3,7 @@ use anyhow::Result;
 use sha2::{Digest, Sha256};
 use std::io::Read;
 use std::str;
-use text_colorizer::*;
+
 
 //use std::fs::{self, DirBuilder};
 

@@ -26,4 +26,4 @@ fn handle_connection(mut stream: TcpStream) {
 
     stream.write_all(response.as_bytes()).unwrap();
 }
-//let resp = reqwest::blocking::get("https://www.google.com/").unwrap().text().unwrap();
+
