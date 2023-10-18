@@ -9,6 +9,7 @@ use text_colorizer::*;
 pub struct Arguments {
     pub file_name: String,
     pub vm_name: String,
+    pub vm_ip: String,
 }
 
 pub fn print_help() {
@@ -35,7 +36,7 @@ fn args_parser() -> Arguments {
         std::process::exit(1);
     }
 
-    if args.len() != 2 {
+    if args.len() != 3 {
         eprintln!(
             "{} wrong number of argument give. got {}.",
             "Error".red().bold(),
@@ -47,6 +48,7 @@ fn args_parser() -> Arguments {
     Arguments {
         file_name: args[0].clone(),
         vm_name: args[1].clone(),
+        vm_ip: args[2].clone(),
     }
 }
 

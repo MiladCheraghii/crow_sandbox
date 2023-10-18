@@ -17,7 +17,7 @@ fn main() {
 
     // send file to vm
     //
-    submit_manager::send_command();
+    submit_manager::send_command(String::from(&arg_config.vm_ip));
 
     let _vm_name = String::from(r"win10x64");
 }
